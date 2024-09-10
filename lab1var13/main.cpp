@@ -9,12 +9,12 @@ void Program()
          << "This program removes duplicate numbers from an array." << endl;
 }
 
-// функция, которая не возвращает никаких значений
+// С„СѓРЅРєС†РёСЏ, РєРѕС‚РѕСЂР°СЏ РЅРµ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅРёРєР°РєРёС… Р·РЅР°С‡РµРЅРёР№
 void uncorrect()
 {
-    // Возврат оператора ввода в состояние без ошибок
+    // Р’РѕР·РІСЂР°С‚ РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РІ СЃРѕСЃС‚РѕСЏРЅРёРµ Р±РµР· РѕС€РёР±РѕРє
     cin.clear();
-    // очистка буфера по максимальному значению типа int (streamsize) до того, пока не найдет enter
+    // РѕС‡РёСЃС‚РєР° Р±СѓС„РµСЂР° РїРѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРјСѓ Р·РЅР°С‡РµРЅРёСЋ С‚РёРїР° int (streamsize) РґРѕ С‚РѕРіРѕ, РїРѕРєР° РЅРµ РЅР°Р№РґРµС‚ enter
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cout << "I don't understand you, sorry. Please, try again.\n";
 }
@@ -24,9 +24,9 @@ char valid_continue()
     cout << "Do you want to continue? (y/n) >> ";
     char answer;
     cin >> answer;
-    // С помощью библиотеки locale и функции tolower понижаем регистр
+    // РЎ РїРѕРјРѕС‰СЊСЋ Р±РёР±Р»РёРѕС‚РµРєРё locale Рё С„СѓРЅРєС†РёРё tolower РїРѕРЅРёР¶Р°РµРј СЂРµРіРёСЃС‚СЂ
     answer = tolower(answer);
-    while (answer != 'y' && answer != 'n' || cin.peek() != '\n') // функция peek извлекает следующий символ из потока фактически не потребляя его
+    while (answer != 'y' && answer != 'n' || cin.peek() != '\n') // С„СѓРЅРєС†РёСЏ peek РёР·РІР»РµРєР°РµС‚ СЃР»РµРґСѓСЋС‰РёР№ СЃРёРјРІРѕР» РёР· РїРѕС‚РѕРєР° С„Р°РєС‚РёС‡РµСЃРєРё РЅРµ РїРѕС‚СЂРµР±Р»СЏСЏ РµРіРѕ
     {
         uncorrect();
         cout << "Do you want to continue? (y/n) >> ";
